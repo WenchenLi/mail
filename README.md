@@ -1,6 +1,10 @@
 # mail
 a simple python script for sending email
-  
+
+# install 
+```bash
+sudo python setup.py install
+```
 # run
 ```python
 #please define all constants in the constant.py file
