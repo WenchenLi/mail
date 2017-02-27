@@ -40,7 +40,7 @@ setup(
     maintainer='Wenchen Li',
     maintainer_email='wenchen.li.cs@gmail.com',
     url='http://github.com/WenchenLi/mail',
-    dependency_links=[],
+    # dependency_links=[],
     classifiers=[
         'Development Status :: 3 - Alpha',
         'Environment :: Plugins',
@@ -51,5 +51,4 @@ setup(
         'Topic :: Software Development :: Libraries :: Python Modules',
     ],
     packages=packages,
-    include_package_data=True,
 )
