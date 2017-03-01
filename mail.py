@@ -10,7 +10,7 @@ def send_mail(fromaddr, toaddr, subject, mail_body, send_mail_server,ps,
     """
     simple send mail with body and attachment
     :param fromaddr: str|sender email address
-    :param toaddr: list of str| list of receiver email address
+    :param toaddr: dict of list of str| list of receiver email address
     :param subject: str| subject of email
     :param mail_body: str|email body
     :param send_mail_server: str|
@@ -42,8 +42,9 @@ def send_mail(fromaddr, toaddr, subject, mail_body, send_mail_server,ps,
     text = msg.as_string()
 
     for k in toaddr:
-        print k
-        server.sendmail(fromaddr, toaddr[k], text)
+        if toaddr[k]:
+            server.sendmail(fromaddr, toaddr[k], text)
+
     server.quit()
 
 if __name__=="__main__":
